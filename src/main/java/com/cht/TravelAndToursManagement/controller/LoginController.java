@@ -13,7 +13,7 @@ public class LoginController {
     @FXML
     private StackPane loginContainer;
 
-    public void loginButton(ActionEvent actionEvent) throws IOException {
+    public void loginButton() throws IOException {
         new SceneChanger(loginContainer,"view/Dashboard.fxml");
         Stage stage = (Stage) loginContainer.getScene().getWindow();
         stage.setMaximized(true);

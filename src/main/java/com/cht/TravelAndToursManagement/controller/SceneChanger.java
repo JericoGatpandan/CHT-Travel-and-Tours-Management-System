@@ -22,7 +22,6 @@ public class SceneChanger {
         BorderPane nextView = FXMLLoader.load(Objects.requireNonNull(MainApplication.class.getResource(fxml)));
         currentView.getChildren().removeAll();
         currentView.setCenter(nextView);
-//        currentView.getChildren().setAll(nextView);
     }
 
 
