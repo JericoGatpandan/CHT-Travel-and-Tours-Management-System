@@ -5,6 +5,7 @@
     import javafx.scene.Parent;
     import javafx.scene.Scene;
     import javafx.stage.Stage;
+    import javafx.stage.StageStyle;
 
     import java.io.IOException;
     import java.util.Objects;
@@ -19,6 +20,7 @@
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root, 600, 400);
             stage.setTitle("Travel and Tours Management System");
+            stage.initStyle(StageStyle.UNDECORATED);
             stage.setScene(scene);
             stage.centerOnScreen();
             stage.show();
