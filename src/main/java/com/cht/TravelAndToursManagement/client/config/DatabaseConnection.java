@@ -9,10 +9,10 @@ public class DatabaseConnection {
 
     public Connection getConnection() {
         String databaseName = "cht";
-        String databaseUser = "root";
-        String databasePassword = "password";
-         String url = "jdbc:mysql://localhost:3306/" + databaseName;
-//        String url = "jdbc:mysql://192.168.254.149:3306/" + databaseName;
+        String databaseUser = "jerico";
+        String databasePassword = "password@12345";
+//         String url = "jdbc:mysql://localhost:3306/" + databaseName;
+        String url = "jdbc:mysql://192.168.254.149:3306/" + databaseName;
 
 
         try {
