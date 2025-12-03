@@ -12,8 +12,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
     <left>
         <AnchorPane fx:id="sidebarContainer" prefHeight="400.0" prefWidth="126.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
             <children>
@@ -28,6 +27,7 @@
                         <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" style="-fx-border-color: none; -fx-background-color: transparent;" text="Home" textFill="WHITE" />
                         <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" style="-fx-border-color: none; -fx-background-color: transparent;" text="Customer" textFill="WHITE" />
                         <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-border-color: none; -fx-background-color: transparent;" text="Trips" textFill="WHITE" />
+                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" style="-fx-border-color: none; -fx-background-color: transparent;" text="Tour Packages" textFill="WHITE" />
                     </children>
                 </VBox>
             </children>

@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -17,7 +18,7 @@ import java.sql.Statement;
 
 public class LoginController {
     @FXML
-    private StackPane loginContainer;
+    private BorderPane loginContainer;
     @FXML
     private Label loginMessageLabel;
     @FXML
@@ -58,7 +59,7 @@ public class LoginController {
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
 
-                    new SceneChanger(loginContainer, "/com/cht/TravelAndToursManagement/view/Dashboard.fxml");
+                    new SceneChanger(loginContainer, "/com/cht/TravelAndToursManagement/view/AddBooking.fxml");
                     loginMessageLabel.setText("Login Successfully!");
                 } else {
                     loginMessageLabel.setText("Invalid Login. Please try again.");

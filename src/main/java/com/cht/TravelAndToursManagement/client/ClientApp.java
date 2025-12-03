@@ -15,10 +15,11 @@ public class ClientApp extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("/com/cht/TravelAndToursManagement/view/Login.fxml")));
+        FXMLLoader fxmlLoader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("/com/cht/TravelAndToursManagement/view/Login-view.fxml")));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene = new Scene(root, 100, 800);
         stage.setTitle("Travel and Tours Management System");
+        stage.setMaximized(true);
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.show();
