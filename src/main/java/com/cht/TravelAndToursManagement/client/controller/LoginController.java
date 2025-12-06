@@ -64,10 +64,13 @@ public class LoginController {
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
                     try {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/cht/TravelAndToursManagement/view/MainLayout-view.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/cht/TravelAndToursManagement/view/Dashboard-view.fxml"));
                         BorderPane mainRoot = loader.load();
                         Scene mainScene = new Scene(mainRoot, 1200, 800);
+
                         Stage stage = (Stage) loginButton.getScene().getWindow(); // reuse stage
+                        stage.setMaximized(true);
+                        stage.centerOnScreen();
                         stage.setScene(mainScene);
                     } catch (IOException e) {
                         e.printStackTrace();
