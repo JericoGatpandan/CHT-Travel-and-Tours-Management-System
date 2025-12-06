@@ -1,6 +1,5 @@
 package com.cht.TravelAndToursManagement.client;
 
-import com.cht.TravelAndToursManagement.client.controller.SceneManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,10 +7,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
 
-public class ClientApp extends Application {
+public class MainApplication extends Application {
 
 
     @Override
@@ -25,9 +23,9 @@ public class ClientApp extends Application {
 //        manager.switchScene("/com/cht/TravelAndToursManagement/view/Login-view.fxml");
 ////        Scene scene = new Scene(root, 100, 800);
 //        stage.setTitle("Travel and Tours Management System");
-//        stage.setMaximized(true);
+
 ////        stage.setScene(scene);
-//        stage.centerOnScreen();
+
 //        stage.show();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/cht/TravelAndToursManagement/view/Login-view.fxml"));
@@ -35,6 +33,8 @@ public class ClientApp extends Application {
 
         Scene loginScene = new Scene(loginRoot, 400, 600);
         stage.setScene(loginScene);
+        stage.setMaximized(true);
+        stage.centerOnScreen();
         stage.setTitle("Login - Travel and Tours Management");
         stage.show();
     }
