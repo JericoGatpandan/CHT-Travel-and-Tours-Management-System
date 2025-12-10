@@ -15,7 +15,7 @@ import java.sql.Connection;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class MainLayoutController extends SceneController implements Initializable {
+public class MainLayoutController2 extends SceneController implements Initializable {
 
     @FXML
     public Label totalCustomer;

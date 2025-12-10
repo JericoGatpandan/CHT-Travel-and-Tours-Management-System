@@ -79,7 +79,10 @@ public class AuthController extends SceneController {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/cht/TravelAndToursManagement/view/MainLayout-view.fxml"));
                         BorderPane mainRoot = loader.load();
                         Scene mainScene = new Scene(mainRoot, 1200, 800);
+
                         Stage stage = (Stage) loginButton.getScene().getWindow(); // reuse stage
+                        stage.centerOnScreen();
+                        stage.setMaximized(true);
                         stage.setScene(mainScene);
                     } catch (IOException e) {
                         e.printStackTrace();

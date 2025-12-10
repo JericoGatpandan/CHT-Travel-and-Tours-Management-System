@@ -1,83 +1,76 @@
 package com.cht.TravelAndToursManagement.client.model;
 
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 
 public class Employee {
-    private String employeeID;
-    private String name;
-    private String email;
-    private String password;
-    private String contactNumber;
-    private boolean isManager;
-    private boolean isActive;
+    private final SimpleStringProperty name;
+    private final SimpleStringProperty email;
+    private final SimpleStringProperty contactNumber;
+    private final SimpleStringProperty isManager;
+    private final SimpleStringProperty isActive;
 
-    public Employee(String employeeID, String name, String email, String password, String contactNumber, boolean isManager, boolean isActive) {
-        this.employeeID = employeeID;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.contactNumber = contactNumber;
-        this.isManager = isManager;
-        this.isActive = isActive;
+    public Employee(String name, String email, String contactNumber, boolean isManager, boolean isActive) {
+        this.name = new SimpleStringProperty(name);
+        this.email = new SimpleStringProperty(email);
+        this.contactNumber = new SimpleStringProperty(contactNumber);
+        this.isManager = new SimpleStringProperty(String.valueOf(isManager));
+        this.isActive = new SimpleStringProperty(String.valueOf(isActive));
     }
 
     // Getters
-    public String getEmployeeID() {
-        return employeeID;
-    }
-
     public String getName() {
-        return name;
+        return name.get();
     }
 
     public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
+        return email.get();
     }
 
     public String getContactNumber() {
-        return contactNumber;
+        return contactNumber.get();
     }
 
-    public boolean isManager() {
+    public SimpleStringProperty isManager() {
         return isManager;
     }
 
-    public boolean isActive() {
+    public SimpleStringProperty isActive() {
         return isActive;
     }
 
-    // Setters
-    public void setEmployeeID(String employeeID) {
-        this.employeeID = employeeID;
-    }
-
     public void setName(String name) {
-        this.name = name;
+        this.name.set(name);
     }
 
     public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+        this.email.set(email);
     }
 
     public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
+        this.contactNumber.set(contactNumber);
     }
 
-    public void setActive(boolean active) {
-        isActive = active;
+    //    public void setIsManager(boolean manager) {
+//        isManager = manager;
+//    }
+    public ObservableValue<String> nameProperty() {
+        return name;
     }
 
-    public void setManager(boolean manager) {
-        isManager = manager;
+    public ObservableValue<String> emailProperty() {
+        return email;
     }
 
+    public ObservableValue<String> contactNumberProperty() {
+        return contactNumber;
+    }
 
+    public ObservableValue<String> isManagerProperty() {
+        return isManager;
+    }
+
+    public ObservableValue<String> isActiveProperty() {
+        return isActive;
+    }
 }
