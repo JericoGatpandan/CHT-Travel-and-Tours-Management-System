@@ -1,27 +1,20 @@
 package com.cht.TravelAndToursManagement.client.controller;
 
-import com.cht.TravelAndToursManagement.client.config.DatabaseConnection;
-import javafx.event.ActionEvent;
+import com.cht.TravelAndToursManagement.client.config.DatabaseConfig;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Objects;
 import java.util.ResourceBundle;
-
-import static com.mysql.cj.conf.PropertyKey.logger;
 
 public class MainLayoutController extends SceneController implements Initializable {
     // DB Connection
-    DatabaseConnection connectNow = new DatabaseConnection();
+    DatabaseConfig connectNow = new DatabaseConfig();
 
 
     @FXML

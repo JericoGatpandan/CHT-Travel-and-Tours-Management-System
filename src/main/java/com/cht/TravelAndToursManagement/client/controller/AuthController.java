@@ -1,7 +1,11 @@
 package com.cht.TravelAndToursManagement.client.controller;
 
 
-import com.cht.TravelAndToursManagement.client.config.DatabaseConnection;
+import com.cht.TravelAndToursManagement.client.config.DatabaseConfig;
+import com.cht.TravelAndToursManagement.client.navigation.NavigationService;
+import com.cht.TravelAndToursManagement.client.navigation.Route;
+import com.cht.TravelAndToursManagement.client.service.AuthenticationService;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,18 +16,21 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.Objects;
+import java.sql.*;
 
 public class AuthController extends SceneController {
     // Db Connection
-    DatabaseConnection connectNow = new DatabaseConnection();
+    DatabaseConfig connectNow = new DatabaseConfig();
+    private final AuthenticationService authService;
+    private final NavigationService navigationService;
+
+    private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
+
 
     @FXML
     private Button createAccountButton;
@@ -56,18 +63,37 @@ public class AuthController extends SceneController {
     @FXML
     private PasswordField passwordPasswordField;
 
+    public AuthController(AuthenticationService authService, NavigationService navigationService) {
+        this.authService = authService;
+        this.navigationService = navigationService;
+    }
 
-    public void loginButton() {
-        loginMessageLabel.setText("You try to Login!");
 
-        if (!usernameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()) {
-            validateLogin();
-        } else {
-            loginMessageLabel.setText("Username or Password is empty!");
+    @FXML
+    public void onLoginButtonClicked() {
+        String email = usernameTextField.getText();
+        String password = passwordPasswordField.getText();
+
+        if (email.isBlank() || password.isBlank()) {
+            loginMessageLabel.setText("Username or password is empty");
+            return;
         }
-        // Stage stage = (Stage) loginContainer.getScene().getWindow();
-        // stage.setMaximized(true);
+        Task<Boolean> loginTask = new Task<>() {
+            @Override
+            protected Boolean call() {
+                return authService.authenticate(email, password);
+            }
+        };
 
+        loginTask.setOnSucceeded(event -> {
+            if (loginTask.getValue()) {
+                NavigationService.navigateTo(Route.DASHBOARD);
+            } else {
+                loginMessageLabel.setText("Invalid credentials");
+            }
+        });
+
+        new Thread(loginTask).start();
     }
 
     public void cancelButton() throws IOException {
@@ -107,8 +133,8 @@ public class AuthController extends SceneController {
                     loginMessageLabel.setText("Invalid Login. Please try again.");
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
+            logger.error("Database error during login", e);
         }
     }
 

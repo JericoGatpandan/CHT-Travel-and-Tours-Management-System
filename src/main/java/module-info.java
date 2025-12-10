@@ -5,6 +5,8 @@ module com.cht.TravelAndToursManagement.client {
     requires java.sql;
     requires mysql.connector.j;
     requires jdk.httpserver;
+    requires org.slf4j;
+    requires com.zaxxer.hikari;
 
     opens com.cht.TravelAndToursManagement.client.controller to javafx.fxml;
     exports com.cht.TravelAndToursManagement.client;

@@ -1,27 +1,21 @@
 package com.cht.TravelAndToursManagement.client.controller;
 
-import com.cht.TravelAndToursManagement.client.config.DatabaseConnection;
+import com.cht.TravelAndToursManagement.client.config.DatabaseConfig;
 import com.cht.TravelAndToursManagement.client.model.Employee;
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ResourceBundle;
 
 public class EmployeeController extends SceneController {
     // DB Connection
-    DatabaseConnection connectNow = new DatabaseConnection();
+    DatabaseConfig connectNow = new DatabaseConfig();
 
     @FXML
     private TableView<Employee> TableContainer;
