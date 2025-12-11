@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<!-- Extracted center dashboard content from MainLayout so the sidebar can remain constant -->
+<VBox xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" prefHeight="200.0" prefWidth="100.0"
+      fx:controller="com.cht.TravelAndToursManagement.client.controller.MainLayoutController"
+>
+    <children>
+        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="474.0" spacing="100.0">
+            <children>
+                <Label text="Dashboard View"/>
+                <!-- Button still calls MainLayoutController.addBooking via shell controller -->
+                <Button mnemonicParsing="false" text="Add New Booking" onAction="#addBooking"/>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;">
+                    <children>
+                        <Label text="Total Customers">
+                            <font>
+                                <Font size="10.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="totalCustomer" text="0"/>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;">
+                    <children>
+                        <Label text="Ongoing Trips">
+                            <font>
+                                <Font size="10.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="ongoingTrips" text="0"/>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;">
+                    <children>
+                        <Label text="Upcoming Trips">
+                            <font>
+                                <Font size="10.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="upcomingTrips" text="0"/>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;">
+                    <children>
+                        <Label text="Completed Trips">
+                            <font>
+                                <Font size="10.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="completedTrips" text="0"/>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </HBox>
+        <TableView prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Trip ID"/>
+                <TableColumn prefWidth="75.0" text="Customer"/>
+                <TableColumn prefWidth="75.0" text="Destination"/>
+                <TableColumn prefWidth="75.0" text="Package"/>
+                <TableColumn prefWidth="75.0" text="StartDate"/>
+                <TableColumn prefWidth="75.0" text="EndDate"/>
+                <TableColumn prefWidth="75.0" text="Status"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+</VBox>
+

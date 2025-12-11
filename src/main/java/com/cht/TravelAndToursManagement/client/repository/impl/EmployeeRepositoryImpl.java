@@ -13,21 +13,21 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
-import static com.cht.TravelAndToursManagement.client.config.DatabaseConfig.dataSource;
-
-
 public class EmployeeRepositoryImpl implements EmployeeRepository {
 
     private final DataSource dataSource;
 
     public EmployeeRepositoryImpl(DataSource dataSource) {
-        this.dataSource = DatabaseConfig.dataSource;
+        // Use the injected DataSource instead of the static one from DatabaseConfig
+        this.dataSource = dataSource;
     }
 
     @Override
     public Optional<Employee> findByEmail(String email) {
-        String sql = "SELECT * FROM employees WHERE email = ?";
-        try (Connection connectDB = dataSource.getConnection(); PreparedStatement preparedStatement = connectDB.prepareStatement(sql)) {
+        // Align table name with schema used elsewhere (e.g. AuthController.validateLogin uses Employee)
+        String sql = "SELECT * FROM employee WHERE email = ?";
+        try (Connection connectDB = dataSource.getConnection();
+             PreparedStatement preparedStatement = connectDB.prepareStatement(sql)) {
             preparedStatement.setString(1, email);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 if (resultSet.next()) {
@@ -62,13 +62,15 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
     @Override
     public void delete(Long id) {
-
+        // TODO implement delete when necessary
     }
 
     @Override
     public boolean validateCredentials(String email, String password) {
-        String sql = "SELECT COUNT(1) FROM employees WHERE email = ? AND password = ?";
-        try (Connection connectDB = dataSource.getConnection(); PreparedStatement preparedStatement = connectDB.prepareStatement(sql)) {
+        // Align table name with schema used elsewhere (e.g. AuthController.validateLogin uses Employee)
+        String sql = "SELECT COUNT(1) FROM employee WHERE email = ? AND password = ?";
+        try (Connection connectDB = dataSource.getConnection();
+             PreparedStatement preparedStatement = connectDB.prepareStatement(sql)) {
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {

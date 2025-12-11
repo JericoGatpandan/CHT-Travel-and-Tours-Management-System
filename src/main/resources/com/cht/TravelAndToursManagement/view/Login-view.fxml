@@ -12,6 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="contentArea" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.cht.TravelAndToursManagement.client.controller.AuthController"
 >
     <center>
 
@@ -83,7 +84,7 @@
                                     <children>
                                         <Label text="No account?"/>
                                         <Button fx:id="createAccountButton" mnemonicParsing="false"
-                                                text="Create Account" onAction="#createAccountButton"/>
+                                                text="Create Account" onAction="#onRegisterButtonClicked"/>
                                     </children>
                                 </HBox>
                             </children>

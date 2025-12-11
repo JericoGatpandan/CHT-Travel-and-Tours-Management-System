@@ -49,12 +49,31 @@ public class BookingRepositoryImpl implements BookingRepository {
         return 0;
     }
 
+    @Override
+    public int countByStatus(String status) {
+        String sql = "SELECT COUNT(*) FROM booking WHERE status = ?";
+        try (Connection conn = dataSource.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, status);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt(1);
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error counting bookings by status", e);
+        }
+        return 0;
+    }
+
     private Booking mapBooking(ResultSet rs) throws SQLException {
         Booking booking = new Booking();
-        booking.setId(rs.getLong("id"));
-        booking.setCustomerId(rs.getLong("customer_id"));
-        booking.setBookingDate(rs.getDate("booking_date").toLocalDate());
-        booking.setTotalAmount(rs.getBigDecimal("total_amount"));
+        booking.setBookingId(rs.getInt("employeeId"));
+        booking.setClientId(rs.getInt("clientId"));
+        booking.setBookingDate(String.valueOf(rs.getDate("bookingDate").toLocalDate()));
+        booking.setStatus(rs.getString("status"));
+        booking.setPaxCount(rs.getInt("paxCount"));
+
         return booking;
     }
 

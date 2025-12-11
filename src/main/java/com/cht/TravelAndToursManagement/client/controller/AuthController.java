@@ -9,8 +9,6 @@ import com.cht.TravelAndToursManagement.client.utils.ValidationUtils;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -24,7 +22,7 @@ import java.io.IOException;
 
 import java.sql.*;
 
-public class AuthController extends SceneController {
+public class AuthController {
     private final AuthenticationService authService;
     private final NavigationService navigationService;
 
@@ -85,7 +83,8 @@ public class AuthController extends SceneController {
 
         loginTask.setOnSucceeded(event -> {
             if (loginTask.getValue()) {
-                navigationService.navigateTo(Route.REGISTER);
+                // Successful login goes to dashboard/main layout
+                navigationService.navigateTo(Route.DASHBOARD);
             } else {
                 loginMessageLabel.setText("Invalid credentials");
             }
@@ -124,6 +123,8 @@ public class AuthController extends SceneController {
         navigationService.navigateTo(Route.REGISTER);
     }
 
+    // Deprecated manual JDBC + FXMLLoader based login, kept only for reference.
+    // Navigation is now handled via AuthenticationService + NavigationService in onLoginButtonClicked().
     public void validateLogin() {
         String email = usernameTextField.getText();
         String password = passwordPasswordField.getText();
@@ -138,19 +139,8 @@ public class AuthController extends SceneController {
 
             while (resultSet.next()) {
                 if (resultSet.getInt(1) == 1) {
-                    try {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/cht/TravelAndToursManagement/view/MainLayout-view.fxml"));
-                        BorderPane mainRoot = loader.load();
-                        Scene mainScene = new Scene(mainRoot, 1200, 800);
-
-                        Stage stage = (Stage) loginButton.getScene().getWindow(); // reuse stage
-                        stage.centerOnScreen();
-                        stage.setMaximized(true);
-                        stage.setScene(mainScene);
-                    } catch (IOException e) {
-                        logger.error(e.getMessage());
-                    }
-//                    loginMessageLabel.setText("Login Successfully!");
+                    // Old navigation code removed in favor of NavigationService
+                    navigationService.navigateTo(Route.DASHBOARD);
                 } else {
                     loginMessageLabel.setText("Invalid Login. Please try again.");
                 }
@@ -166,7 +156,7 @@ public class AuthController extends SceneController {
         String contactNumber = contactNumberTextField.getText();
         String password = confirmPasswordField.getText();
 
-        String insertEmployee = "INSERT INTO Employee (name, email, contactNumber, password, isManager, isActive) VALUES (?, ?, ?, ?, ?, ?)";
+        String insertEmployee = "INSERT INTO employee (name, email, contactNumber, password, isManager, isActive) VALUES (?, ?, ?, ?, ?, ?)";
 
 
         try (Connection connectDB = DatabaseConfig.getConnection();
@@ -178,6 +168,8 @@ public class AuthController extends SceneController {
             preparedStatement.setBoolean(5, false);
             preparedStatement.setBoolean(6, true);
 
+            preparedStatement.executeUpdate();
+            navigationService.navigateTo(Route.LOGIN);
             registerMessageLabel.setText("Account Created Successfully!");
         } catch (Exception e) {
             logger.error(e.getMessage());
@@ -187,7 +179,8 @@ public class AuthController extends SceneController {
     }
 
     public void createAccountButton(ActionEvent event) {
-        setCenter("/com/cht/TravelAndToursManagement/view/Register-view.fxml");
+        // For now, treat register as a full screen instead of swapping inside a container
+        navigationService.navigateTo(Route.REGISTER);
     }
 
 

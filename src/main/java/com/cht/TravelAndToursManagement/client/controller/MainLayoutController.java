@@ -1,29 +1,26 @@
 package com.cht.TravelAndToursManagement.client.controller;
 
-import com.cht.TravelAndToursManagement.client.config.DatabaseConfig;
-import com.cht.TravelAndToursManagement.client.navigation.NavigationService;
-import com.cht.TravelAndToursManagement.client.navigation.Route;
-//import com.cht.TravelAndToursManagement.client.service.DashboardService;
-import javafx.concurrent.Task;
+import com.cht.TravelAndToursManagement.client.service.DashboardService;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ResourceBundle;
+import java.util.Objects;
 
-public class MainLayoutController /*implements Initializable*/ {
+public class MainLayoutController {
     private static final Logger logger = LoggerFactory.getLogger(MainLayoutController.class);
 
-    //    private final DashboardService dashboardService;
-    private final NavigationService navigationService;
+    private final DashboardService dashboardService;
+
+    // Root BorderPane from MainLayout-view.fxml (sidebar + center area)
+    @FXML
+    private BorderPane contentArea;
 
     @FXML
     public Label totalCustomer;
@@ -34,47 +31,36 @@ public class MainLayoutController /*implements Initializable*/ {
     @FXML
     public Label completedTrips;
 
-    public MainLayoutController(/*DashboardService dashboardService,*/ NavigationService navigationService) {
-//        this.dashboardService = dashboardService;
-        this.navigationService = navigationService;
+    public MainLayoutController(DashboardService dashboardService, com.cht.TravelAndToursManagement.client.navigation.NavigationService navigationService) {
+        this.dashboardService = dashboardService;
     }
 
-//    @Override
-//    public void initialize(URL location, ResourceBundle resources) {
-//        loadDashboardStats();
-//
-//    }
-
-
-//    private void loadDashboardStats() {
-//        Task<DashboardStats> statsTask = new Task<>() {
-//            @Override
-//            protected DashboardStats call() {
-//                return dashboardService.getDashboardStats();
-//            }
-//        };
-//        statsTask.setOnSucceeded(event -> {
-//            DashboardStats stats = statsTask.getValue();
-//            totalCustomer.setText(String.valueOf(stats.totalCustomers()));
-//            ongoingTrips.setText(String.valueOf(stats.ongoingTrips()));
-//            upcomingTrips.setText(String.valueOf(stats.upcomingTrips()));
-//            completedTrips.setText(String.valueOf(stats.completedTrips()));
-//        });
-//        statsTask.setOnFailed(event -> {
-//            logger.error("Failed to load dashboard stats", statsTask.getException());
-//            showError("Failed to load dashboard data");
-//        });
-//        new Thread(statsTask).start();
-//    }
+    /**
+     * Swap the center content of the main layout while keeping the sidebar intact.
+     */
+    private void setCenterContent(String fxmlPath) {
+        try {
+            FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource(fxmlPath)));
+            Node node = loader.load();
+            if (contentArea != null) {
+                contentArea.setCenter(node);
+            }
+        } catch (IOException e) {
+            logger.error("Failed to load center content FXML: {}", fxmlPath, e);
+            showError("Failed to load content");
+        }
+    }
 
     @FXML
     public void goToEmployee() {
-        navigationService.navigateTo(Route.EMPLOYEE);
+        // Load Employee center content inside the existing main layout (sidebar preserved)
+        setCenterContent("/com/cht/TravelAndToursManagement/view/Employee-view.fxml");
     }
 
     @FXML
     public void addBooking() {
-        navigationService.navigateTo(Route.BOOKING);
+        // Load first booking step inside the existing main layout (sidebar preserved)
+        setCenterContent("/com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml");
     }
 
     private void showError(String message) {
@@ -82,4 +68,3 @@ public class MainLayoutController /*implements Initializable*/ {
         alert.showAndWait();
     }
 }
-

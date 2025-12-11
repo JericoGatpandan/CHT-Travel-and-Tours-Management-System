@@ -6,7 +6,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.EnumMap;
 import java.util.Map;
+import java.util.Objects;
 
 
 public class NavigationService {
@@ -15,35 +17,39 @@ public class NavigationService {
     private final ControllerFactory controllerFactory;
 
     public NavigationService(Stage primaryStage, ControllerFactory factory) {
-        this.primaryStage = primaryStage;
-        this.controllerFactory = factory;
+        this.primaryStage = Objects.requireNonNull(primaryStage, "primaryStage must not be null");
+        this.controllerFactory = Objects.requireNonNull(factory, "controllerFactory must not be null");
         this.routeMap = initializedRoutes();
-
-        navigateTo(Route.LOGIN);
     }
 
     private Map<Route, String> initializedRoutes() {
-        return Map.of(
-                Route.LOGIN, FXMLPaths.LOGIN,
-                Route.DASHBOARD, FXMLPaths.DASHBOARD,
-                Route.EMPLOYEE, FXMLPaths.EMPLOYEE,
-                Route.REGISTER, FXMLPaths.REGISTER
-        );
+        Map<Route, String> map = new EnumMap<>(Route.class);
+        map.put(Route.LOGIN, FXMLPaths.LOGIN);
+        map.put(Route.DASHBOARD, FXMLPaths.DASHBOARD);
+        map.put(Route.EMPLOYEE, FXMLPaths.EMPLOYEE);
+        map.put(Route.REGISTER, FXMLPaths.REGISTER);
+        // If BOOKING should be a top-level screen, map it to the first booking step for now
+        map.put(Route.BOOKING, FXMLPaths.BOOKING_STEP1);
+        return map;
     }
 
-
     public void navigateTo(Route route) {
+        String fxmlPath = routeMap.get(route);
+        if (fxmlPath == null) {
+            throw new NavigationException("No FXML mapping found for route: " + route, null);
+        }
+
         try {
-            String fxmlPath = routeMap.get(route);
             FXMLLoader loader = new FXMLLoader(NavigationService.class.getResource(fxmlPath));
             loader.setControllerFactory(controllerFactory);
             Parent root = loader.load();
 
             Scene scene = new Scene(root);
+            primaryStage.setMaximized(true);
+
             primaryStage.setScene(scene);
         } catch (IOException e) {
-            throw new NavigationException("Failed to navigate to " + route, e);
+            throw new NavigationException("Failed to navigate to " + route + " using FXML: " + fxmlPath, e);
         }
     }
 }
-
