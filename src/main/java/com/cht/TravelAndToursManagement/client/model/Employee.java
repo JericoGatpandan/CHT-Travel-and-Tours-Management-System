@@ -4,6 +4,7 @@ public class Employee {
     private int employeeId;
     private String name;
     private String email;
+    private String password;
     private String contactNumber;
     private boolean isManager;
     private boolean isActive;
@@ -19,6 +20,14 @@ public class Employee {
         this.isActive = isActive;
     }
 
+    public Employee() {
+
+    }
+
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
+    }
+
     public int getEmployeeId() {
         return employeeId;
     }
@@ -29,6 +38,10 @@ public class Employee {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public String getContactNumber() {
@@ -64,4 +77,6 @@ public class Employee {
     }
 
 
+    public void setPassword(String password) {
+    }
 }

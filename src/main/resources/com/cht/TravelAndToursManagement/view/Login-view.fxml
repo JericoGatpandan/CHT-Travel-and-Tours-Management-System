@@ -71,7 +71,8 @@
                                 <VBox spacing="20.0">
                                     <children>
                                         <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER"
-                                                mnemonicParsing="false" onAction="#loginButton" prefHeight="25.0"
+                                                mnemonicParsing="false" onAction="#onLoginButtonClicked"
+                                                prefHeight="25.0"
                                                 prefWidth="255.0" text="LOGIN" textAlignment="CENTER"/>
                                         <Button fx:id="cancelButton" alignment="CENTER" contentDisplay="CENTER"
                                                 maxWidth="255.0" mnemonicParsing="false" onAction="#cancelButton"

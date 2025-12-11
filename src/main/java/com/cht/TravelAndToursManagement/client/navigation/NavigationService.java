@@ -35,7 +35,7 @@ public class NavigationService {
     public void navigateTo(Route route) {
         try {
             String fxmlPath = routeMap.get(route);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(routeMap.get(fxmlPath)));
+            FXMLLoader loader = new FXMLLoader(NavigationService.class.getResource(fxmlPath));
             loader.setControllerFactory(controllerFactory);
             Parent root = loader.load();
 

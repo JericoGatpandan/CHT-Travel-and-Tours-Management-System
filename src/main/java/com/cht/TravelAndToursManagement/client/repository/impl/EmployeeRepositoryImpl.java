@@ -1,6 +1,7 @@
 package com.cht.TravelAndToursManagement.client.repository.impl;
 
 import com.cht.TravelAndToursManagement.client.config.DatabaseConfig;
+import com.cht.TravelAndToursManagement.client.exception.DataAccessException;
 import com.cht.TravelAndToursManagement.client.model.Employee;
 import com.cht.TravelAndToursManagement.client.repository.EmployeeRepository;
 
@@ -16,6 +17,8 @@ import static com.cht.TravelAndToursManagement.client.config.DatabaseConfig.data
 
 
 public class EmployeeRepositoryImpl implements EmployeeRepository {
+
+    private final DataSource dataSource;
 
     public EmployeeRepositoryImpl(DataSource dataSource) {
         this.dataSource = DatabaseConfig.dataSource;
@@ -35,6 +38,15 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
             throw new DataAccessException("Error fetching employee by email", e);
         }
         return Optional.empty();
+    }
+
+    private Employee mapEmployee(ResultSet resultSet) throws SQLException {
+        Employee employee = new Employee();
+        employee.setEmployeeId(resultSet.getInt("employeeId"));
+        employee.setEmail(resultSet.getString("email"));
+        employee.setPassword(resultSet.getString("password"));
+        employee.setName(resultSet.getString("name"));
+        return employee;
     }
 
 

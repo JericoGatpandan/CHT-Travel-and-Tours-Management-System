@@ -85,7 +85,7 @@ public class AuthController extends SceneController {
 
         loginTask.setOnSucceeded(event -> {
             if (loginTask.getValue()) {
-                NavigationService.navigateTo(Route.DASHBOARD);
+                navigationService.navigateTo(Route.REGISTER);
             } else {
                 loginMessageLabel.setText("Invalid credentials");
             }
