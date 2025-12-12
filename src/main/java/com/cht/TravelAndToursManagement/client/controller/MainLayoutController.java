@@ -1,5 +1,7 @@
 package com.cht.TravelAndToursManagement.client.controller;
 
+import com.cht.TravelAndToursManagement.client.navigation.FXMLPaths;
+import com.cht.TravelAndToursManagement.client.navigation.Route;
 import com.cht.TravelAndToursManagement.client.service.DashboardService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -54,13 +56,13 @@ public class MainLayoutController {
     @FXML
     public void goToEmployee() {
         // Load Employee center content inside the existing main layout (sidebar preserved)
-        setCenterContent("/com/cht/TravelAndToursManagement/view/Employee-view.fxml");
+        setCenterContent(FXMLPaths.EMPLOYEE);
     }
 
     @FXML
     public void addBooking() {
         // Load first booking step inside the existing main layout (sidebar preserved)
-        setCenterContent("/com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml");
+        setCenterContent(FXMLPaths.BOOKING_STEP1);
     }
 
     private void showError(String message) {
