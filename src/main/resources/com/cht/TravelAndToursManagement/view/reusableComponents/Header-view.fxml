@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <BorderPane prefWidth="280" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/25"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.cht.TravelAndToursManagement.client.controller.MainLayoutController" fx:id="root">
+            fx:controller="com.cht.TravelAndToursManagement.controller.MainLayoutController" fx:id="root">
 
     <!-- Logo -->
     <top>

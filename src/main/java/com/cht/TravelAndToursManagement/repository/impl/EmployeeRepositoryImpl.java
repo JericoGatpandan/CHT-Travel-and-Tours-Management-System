@@ -1,0 +1,85 @@
+package com.cht.TravelAndToursManagement.repository.impl;
+
+import com.cht.TravelAndToursManagement.exception.DataAccessException;
+import com.cht.TravelAndToursManagement.model.Employee;
+import com.cht.TravelAndToursManagement.repository.EmployeeRepository;
+
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Optional;
+
+public class EmployeeRepositoryImpl implements EmployeeRepository {
+
+    private final DataSource dataSource;
+
+    public EmployeeRepositoryImpl(DataSource dataSource) {
+        // Use the injected DataSource instead of the static one from DatabaseConfig
+        this.dataSource = dataSource;
+    }
+
+    @Override
+    public Optional<Employee> findByEmail(String email) {
+        // Align table name with schema used elsewhere (e.g. AuthController.validateLogin uses Employee)
+        String sql = "SELECT * FROM employee WHERE email = ?";
+        try (Connection connectDB = dataSource.getConnection();
+             PreparedStatement preparedStatement = connectDB.prepareStatement(sql)) {
+            preparedStatement.setString(1, email);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    return Optional.of(mapEmployee(resultSet));
+                }
+            }
+        } catch (SQLException e) {
+            throw new DataAccessException("Error fetching employee by email", e);
+        }
+        return Optional.empty();
+    }
+
+    private Employee mapEmployee(ResultSet resultSet) throws SQLException {
+        Employee employee = new Employee();
+        employee.setEmployeeId(resultSet.getInt("employeeId"));
+        employee.setEmail(resultSet.getString("email"));
+        employee.setPassword(resultSet.getString("password"));
+        employee.setName(resultSet.getString("name"));
+        return employee;
+    }
+
+
+    @Override
+    public List<Employee> findAll() {
+        return List.of();
+    }
+
+    @Override
+    public Employee save(Employee employee) {
+        return null;
+    }
+
+    @Override
+    public void delete(Long id) {
+        // TODO implement delete when necessary
+    }
+
+    @Override
+    public boolean validateCredentials(String email, String password) {
+        // Align table name with schema used elsewhere (e.g. AuthController.validateLogin uses Employee)
+        String sql = "SELECT COUNT(1) FROM employee WHERE email = ? AND password = ?";
+        try (Connection connectDB = dataSource.getConnection();
+             PreparedStatement preparedStatement = connectDB.prepareStatement(sql)) {
+            preparedStatement.setString(1, email);
+            preparedStatement.setString(2, password);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    return resultSet.getInt(1) == 1;
+                }
+            }
+        } catch (SQLException e) {
+            throw new DataAccessException("Error validating employee credentials", e);
+        }
+        return false;
+    }
+}

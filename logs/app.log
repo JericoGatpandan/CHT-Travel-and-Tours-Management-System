@@ -1,8 +1,216 @@
-2025-12-15 16:59:12 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-15 16:59:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-15 16:59:13 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f7ef7d9
-2025-12-15 16:59:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-15 17:00:48 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-15 17:00:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-15 17:00:49 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@524757f3
-2025-12-15 17:00:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 15:13:38 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 15:13:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 15:13:38 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b19bf67
+2025-12-22 15:13:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 15:14:19 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 15:14:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 15:14:20 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c19820b
+2025-12-22 15:14:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 15:14:54 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 15:14:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 15:14:54 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cd6d28d
+2025-12-22 15:14:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 15:15:32 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 15:15:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 15:15:33 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@dcd6317
+2025-12-22 15:15:33 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:04:05 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:04:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:04:06 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c925a21
+2025-12-22 16:04:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:04:52 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:04:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:04:52 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c925a21
+2025-12-22 16:04:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:05:52 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:05:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:05:52 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4bae1976
+2025-12-22 16:05:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:07:42 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:07:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:07:42 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f4b9123
+2025-12-22 16:07:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:08:03 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:08:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:08:03 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15db0f4b
+2025-12-22 16:08:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:10:09 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:10:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:10:09 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:10:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:10:47 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:10:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:10:47 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:10:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:11:23 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:11:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:11:24 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d60b915
+2025-12-22 16:11:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:12:17 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:12:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:12:17 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29041e4e
+2025-12-22 16:12:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:12:48 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:12:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:12:48 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:12:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:13:32 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:13:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:13:32 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e2902c9
+2025-12-22 16:13:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:14:01 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:14:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:14:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@607185da
+2025-12-22 16:14:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:17:45 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:17:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:17:45 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:17:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:18:41 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:18:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:18:41 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:18:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:22:11 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:22:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:22:11 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:22:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:22:33 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:22:33 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:22:33 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@607185da
+2025-12-22 16:22:33 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:24:25 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:24:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:24:25 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ec6b3ab
+2025-12-22 16:24:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:25:51 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:25:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:25:52 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:25:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:26:55 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:26:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:26:56 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@607185da
+2025-12-22 16:26:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:27:24 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:27:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:27:25 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1927807f
+2025-12-22 16:27:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:27:54 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:27:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:27:55 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:27:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:29:38 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:29:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:29:39 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25c73ade
+2025-12-22 16:29:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:31:52 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:31:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:31:52 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:31:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:34:55 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:34:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:34:55 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b71a64
+2025-12-22 16:34:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:35:58 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:35:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:35:59 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:35:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:42:30 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:42:30 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:42:31 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41e9192a
+2025-12-22 16:42:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:44:12 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:44:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:44:12 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:44:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:46:35 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:46:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:46:35 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:46:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:52:49 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:52:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:52:50 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:52:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:57:51 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:57:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:57:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:57:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 16:59:03 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 16:59:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 16:59:04 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-22 16:59:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 17:03:52 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 17:03:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 17:03:53 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ec6b3ab
+2025-12-22 17:03:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 17:08:12 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 17:08:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 17:08:13 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ec6b3ab
+2025-12-22 17:08:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 17:27:51 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 17:27:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 17:27:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21a22a5f
+2025-12-22 17:27:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 17:29:06 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 17:29:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 17:29:06 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43c8236f
+2025-12-22 17:29:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 17:31:02 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 17:31:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 17:31:02 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c23cb3d
+2025-12-22 17:31:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 17:31:58 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 17:31:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 17:31:58 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ec6b3ab
+2025-12-22 17:31:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:22:13 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:22:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:22:14 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e5ec43c
+2025-12-22 18:22:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:25:12 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:25:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:25:12 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@663dfad1
+2025-12-22 18:25:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:25:39 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:25:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:25:39 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@607185da
+2025-12-22 18:25:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:26:08 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:26:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:26:08 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@607185da
+2025-12-22 18:26:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:28:03 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:28:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:28:03 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@607185da
+2025-12-22 18:28:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:31:29 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:31:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:31:29 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d949395
+2025-12-22 18:31:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:39:06 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:39:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:39:07 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ec6b3ab
+2025-12-22 18:39:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:39:37 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:39:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:39:37 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7da79a63
+2025-12-22 18:39:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:40:01 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:40:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:40:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b4fc985
+2025-12-22 18:40:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:42:01 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:42:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:42:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ec6b3ab
+2025-12-22 18:42:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:42:20 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:42:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:42:20 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ec6b3ab
+2025-12-22 18:42:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:44:01 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:44:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:44:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7db85d68
+2025-12-22 18:44:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-22 18:44:51 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-22 18:44:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-22 18:44:52 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ec6b3ab
+2025-12-22 18:44:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.

@@ -1,3 +1,8 @@
+root {
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -fx-background-color: #ffffff;
+}
+
 /* Sidebar */
 .sidebar {
     -fx-background-color: white;

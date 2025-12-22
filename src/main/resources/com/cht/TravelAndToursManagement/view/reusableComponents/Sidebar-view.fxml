@@ -2,23 +2,27 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="root" prefHeight="570.0" prefWidth="234.0" styleClass="sidebar" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cht.TravelAndToursManagement.client.controller.MainLayoutController">
+<BorderPane fx:id="root" prefHeight="570.0" prefWidth="234.0" styleClass="sidebar" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cht.TravelAndToursManagement.controller.SidebarController">
 
     <!-- Logo -->
     <top>
-        <VBox spacing="6" styleClass="sidebar-header">
-            <HBox alignment="CENTER_LEFT" spacing="10">
-                <StackPane styleClass="logo-box">
-                    <Label styleClass="logo-icon" text="📍" />
-                </StackPane>
-                <VBox fx:id="titleBox">
-                    <Label styleClass="title" text="CHT Travel and Tours" />
-                    <Label styleClass="subtitle" text="Booking System" />
+        <VBox prefHeight="71.0" prefWidth="232.0" spacing="6" styleClass="sidebar-header">
+            <HBox alignment="CENTER" spacing="10">
+                <VBox fx:id="titleBox" alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/cht-logo.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
                 </VBox>
             </HBox>
         </VBox>
@@ -27,8 +31,8 @@
     <!-- Navigation -->
     <center>
         <VBox spacing="4" styleClass="menu">
+            <Button prefHeight="38.0" prefWidth="238.0" text="+ New Booking" VBox.vgrow="ALWAYS" />
             <Button onAction="#goToBookingView" prefHeight="38.0" prefWidth="234.0" text="Dashboard" textFill="#108af5" VBox.vgrow="ALWAYS" />
-            <Button prefHeight="38.0" prefWidth="238.0" text="New Booking" VBox.vgrow="ALWAYS" />
             <Button prefHeight="38.0" prefWidth="253.0" text="Customer Records" VBox.vgrow="ALWAYS" />
             <Button prefHeight="38.0" prefWidth="251.0" text="Tour Packages" VBox.vgrow="ALWAYS" />
             <Button onAction="#goToEmployee" prefHeight="38.0" prefWidth="248.0" text="Employees" VBox.vgrow="ALWAYS" />

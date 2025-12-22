@@ -12,7 +12,7 @@
 <!-- Extracted center dashboard content from MainLayout so the sidebar can remain constant -->
 
 <VBox prefHeight="445.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.cht.TravelAndToursManagement.client.controller.MainLayoutController">
+      fx:controller="com.cht.TravelAndToursManagement.controller.MainLayoutController">
     <children>
         <fx:include source="reusableComponents/Header-view.fxml"/>
         <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="474.0">

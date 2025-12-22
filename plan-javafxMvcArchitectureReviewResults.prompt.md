@@ -105,7 +105,7 @@ You started building a `ControllerFactory` for dependency injection but then **c
 All your FXML files hardcode controllers:
 
 ```xml
-fx:controller="com.cht.TravelAndToursManagement.client.controller.AuthController"
+fx:controller="com.cht.TravelAndToursManagement.controller.AuthController"
 ```
 
 This means JavaFX creates controllers using the **default no-arg constructor**, but your controllers require
@@ -676,7 +676,7 @@ public class NavigationService {
 ```xml
 <!-- Before -->
 <BorderPane fx:id="contentArea" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.cht.TravelAndToursManagement.client.controller.AuthController">
+            fx:controller="com.cht.TravelAndToursManagement.controller.AuthController">
 
     <!-- After -->
     <BorderPane fx:id="contentArea" xmlns:fx="http://javafx.com/fxml/1">

@@ -1,0 +1,36 @@
+2025-12-15 16:59:12 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-15 16:59:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-15 16:59:13 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f7ef7d9
+2025-12-15 16:59:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-15 17:00:48 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-15 17:00:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-15 17:00:49 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@524757f3
+2025-12-15 17:00:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-18 21:15:50 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-18 21:15:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-18 21:15:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a0f23a8
+2025-12-18 21:15:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-18 21:17:25 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-18 21:17:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-18 21:17:25 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25240884
+2025-12-18 21:17:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-18 21:17:46 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-18 21:17:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-18 21:17:46 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b35928b
+2025-12-18 21:17:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-18 21:19:22 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-18 21:19:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-18 21:19:23 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@736b1a5d
+2025-12-18 21:19:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-18 21:25:35 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-18 21:25:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-18 21:25:35 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c19820b
+2025-12-18 21:25:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-18 21:26:39 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-18 21:26:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-18 21:26:39 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d469c18
+2025-12-18 21:26:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-18 21:28:25 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-18 21:28:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-18 21:28:26 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@113d156c
+2025-12-18 21:28:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.

@@ -1,6 +1,6 @@
 2025-12-11 11:43:02 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
 2025-12-11 11:43:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-11 11:43:04 ERROR com.cht.TravelAndToursManagement.client.config.DatabaseConfig - Failed to initialize HikariCP
+2025-12-11 11:43:04 ERROR com.cht.TravelAndToursManagement.config.DatabaseConfig - Failed to initialize HikariCP
 com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -8,8 +8,8 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.config.DatabaseConfig.<clinit>(DatabaseConfig.java:30)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.ClientApp.start(ClientApp.java:36)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.config.DatabaseConfig.<clinit>(DatabaseConfig.java:30)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.MainApplication.start(ClientApp.java:36)
 	at javafx.graphics@21/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
 	at javafx.graphics@21/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
 	at javafx.graphics@21/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
@@ -62,14 +62,14 @@ Caused by: java.net.UnknownHostException: root: Name or service not known
 	... 24 common frames omitted
 2025-12-11 11:43:39 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
 2025-12-11 11:43:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-11 11:43:41 ERROR com.cht.TravelAndToursManagement.client.config.DatabaseConfig - Failed to initialize HikariCP
+2025-12-11 11:43:41 ERROR com.cht.TravelAndToursManagement.config.DatabaseConfig - Failed to initialize HikariCP
 com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Access denied for user '${DB_USERNAME}'@'localhost' (using password: YES)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:584)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.config.DatabaseConfig.<clinit>(DatabaseConfig.java:30)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.ClientApp.start(ClientApp.java:36)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.config.DatabaseConfig.<clinit>(DatabaseConfig.java:30)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.MainApplication.start(ClientApp.java:36)
 	at javafx.graphics@21/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
 	at javafx.graphics@21/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
 	at javafx.graphics@21/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
@@ -120,12 +120,12 @@ Caused by: java.sql.SQLException: Access denied for user '${DB_USERNAME}'@'local
 2025-12-11 12:09:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2025-12-11 12:09:18 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b879026
 2025-12-11 12:09:18 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-11 12:09:28 ERROR com.cht.TravelAndToursManagement.client.controller.AuthController - Login failed
-com.cht.TravelAndToursManagement.client.exception.DataAccessException: Error validating employee credentials
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.service.AuthenticationService.authenticate(AuthenticationService.java:17)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:77)
+2025-12-11 12:09:28 ERROR com.cht.TravelAndToursManagement.controller.AuthController - Login failed
+com.cht.TravelAndToursManagement.exception.DataAccessException: Error validating employee credentials
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:80)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.service.AuthenticationService.authenticate(AuthenticationService.java:17)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:80)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:77)
 	at javafx.graphics@21/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
@@ -136,14 +136,14 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'cht_updated.employees' doesn
 	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1056)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:74)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:74)
 	... 6 common frames omitted
-2025-12-11 12:09:35 ERROR com.cht.TravelAndToursManagement.client.controller.AuthController - Login failed
-com.cht.TravelAndToursManagement.client.exception.DataAccessException: Error validating employee credentials
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.service.AuthenticationService.authenticate(AuthenticationService.java:17)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:77)
+2025-12-11 12:09:35 ERROR com.cht.TravelAndToursManagement.controller.AuthController - Login failed
+com.cht.TravelAndToursManagement.exception.DataAccessException: Error validating employee credentials
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:80)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.service.AuthenticationService.authenticate(AuthenticationService.java:17)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:80)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:77)
 	at javafx.graphics@21/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
@@ -154,18 +154,18 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'cht_updated.employees' doesn
 	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1056)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:74)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:74)
 	... 6 common frames omitted
 2025-12-11 12:11:47 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
 2025-12-11 12:11:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2025-12-11 12:11:48 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b879026
 2025-12-11 12:11:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-11 12:11:59 ERROR com.cht.TravelAndToursManagement.client.controller.AuthController - Login failed
-com.cht.TravelAndToursManagement.client.exception.DataAccessException: Error validating employee credentials
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.service.AuthenticationService.authenticate(AuthenticationService.java:17)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:77)
+2025-12-11 12:11:59 ERROR com.cht.TravelAndToursManagement.controller.AuthController - Login failed
+com.cht.TravelAndToursManagement.exception.DataAccessException: Error validating employee credentials
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:80)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.service.AuthenticationService.authenticate(AuthenticationService.java:17)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:80)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:77)
 	at javafx.graphics@21/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
@@ -176,18 +176,18 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'cht_updated.employees' doesn
 	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1056)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:74)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:74)
 	... 6 common frames omitted
 2025-12-11 12:12:48 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
 2025-12-11 12:12:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2025-12-11 12:12:50 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f2a7eae
 2025-12-11 12:12:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-11 12:13:01 ERROR com.cht.TravelAndToursManagement.client.controller.AuthController - Login failed
-com.cht.TravelAndToursManagement.client.exception.DataAccessException: Error validating employee credentials
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.service.AuthenticationService.authenticate(AuthenticationService.java:17)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:77)
+2025-12-11 12:13:01 ERROR com.cht.TravelAndToursManagement.controller.AuthController - Login failed
+com.cht.TravelAndToursManagement.exception.DataAccessException: Error validating employee credentials
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:80)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.service.AuthenticationService.authenticate(AuthenticationService.java:17)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:80)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:77)
 	at javafx.graphics@21/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
@@ -198,18 +198,18 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'cht_updated.employees' doesn
 	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1056)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:74)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:74)
 	... 6 common frames omitted
 2025-12-11 12:14:50 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
 2025-12-11 12:14:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2025-12-11 12:14:52 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a7c9b23
 2025-12-11 12:14:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-11 12:15:06 ERROR com.cht.TravelAndToursManagement.client.controller.AuthController - Login failed
-com.cht.TravelAndToursManagement.client.exception.DataAccessException: Error validating employee credentials
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:82)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.service.AuthenticationService.authenticate(AuthenticationService.java:17)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:77)
+2025-12-11 12:15:06 ERROR com.cht.TravelAndToursManagement.controller.AuthController - Login failed
+com.cht.TravelAndToursManagement.exception.DataAccessException: Error validating employee credentials
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:82)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.service.AuthenticationService.authenticate(AuthenticationService.java:17)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:80)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:77)
 	at javafx.graphics@21/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
@@ -220,14 +220,14 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'cht_updated.Employee' doesn'
 	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1056)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:76)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:76)
 	... 6 common frames omitted
-2025-12-11 12:15:48 ERROR com.cht.TravelAndToursManagement.client.controller.AuthController - Login failed
-com.cht.TravelAndToursManagement.client.exception.DataAccessException: Error validating employee credentials
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:82)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.service.AuthenticationService.authenticate(AuthenticationService.java:17)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:80)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.AuthController$1.call(AuthController.java:77)
+2025-12-11 12:15:48 ERROR com.cht.TravelAndToursManagement.controller.AuthController - Login failed
+com.cht.TravelAndToursManagement.exception.DataAccessException: Error validating employee credentials
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:82)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.service.AuthenticationService.authenticate(AuthenticationService.java:17)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:80)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:77)
 	at javafx.graphics@21/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
@@ -238,7 +238,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'cht_updated.Employee' doesn'
 	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1056)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:76)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:76)
 	... 6 common frames omitted
 2025-12-11 12:17:39 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
 2025-12-11 12:17:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
@@ -272,7 +272,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'cht_updated.Employee' doesn'
 2025-12-11 12:27:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2025-12-11 12:27:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a7c9b23
 2025-12-11 12:27:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-11 12:28:04 ERROR com.cht.TravelAndToursManagement.client.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
+2025-12-11 12:28:04 ERROR com.cht.TravelAndToursManagement.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
 javafx.fxml.LoadException: 
 /home/jerico/code/school/java/CHT-Travel-and-Tours-Management-System/target/classes/com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml:17
 
@@ -285,8 +285,8 @@ javafx.fxml.LoadException:
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
@@ -341,12 +341,12 @@ javafx.fxml.LoadException:
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.client.controller.MainLayoutController.<init>()
+Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.controller.MainLayoutController.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3187)
 	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2491)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:941)
 	... 63 common frames omitted
-2025-12-11 12:28:07 ERROR com.cht.TravelAndToursManagement.client.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
+2025-12-11 12:28:07 ERROR com.cht.TravelAndToursManagement.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
 javafx.fxml.LoadException: 
 /home/jerico/code/school/java/CHT-Travel-and-Tours-Management-System/target/classes/com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml:17
 
@@ -359,8 +359,8 @@ javafx.fxml.LoadException:
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
@@ -415,7 +415,7 @@ javafx.fxml.LoadException:
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.client.controller.MainLayoutController.<init>()
+Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.controller.MainLayoutController.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3187)
 	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2491)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:941)
@@ -424,7 +424,7 @@ Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.cli
 2025-12-11 12:29:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2025-12-11 12:29:40 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b879026
 2025-12-11 12:29:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-11 12:29:58 ERROR com.cht.TravelAndToursManagement.client.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
+2025-12-11 12:29:58 ERROR com.cht.TravelAndToursManagement.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
 javafx.fxml.LoadException: 
 /home/jerico/code/school/java/CHT-Travel-and-Tours-Management-System/target/classes/com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml:17
 
@@ -437,8 +437,8 @@ javafx.fxml.LoadException:
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
@@ -493,7 +493,7 @@ javafx.fxml.LoadException:
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.client.controller.MainLayoutController.<init>()
+Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.controller.MainLayoutController.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3187)
 	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2491)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:941)
@@ -502,7 +502,7 @@ Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.cli
 2025-12-11 12:33:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2025-12-11 12:33:32 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a7c9b23
 2025-12-11 12:33:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-11 12:33:58 ERROR com.cht.TravelAndToursManagement.client.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
+2025-12-11 12:33:58 ERROR com.cht.TravelAndToursManagement.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
 javafx.fxml.LoadException: 
 /home/jerico/code/school/java/CHT-Travel-and-Tours-Management-System/target/classes/com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml:17
 
@@ -515,8 +515,8 @@ javafx.fxml.LoadException:
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
@@ -571,7 +571,7 @@ javafx.fxml.LoadException:
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.client.controller.MainLayoutController.<init>()
+Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.controller.MainLayoutController.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3187)
 	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2491)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:941)
@@ -592,12 +592,12 @@ Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.cli
 2025-12-11 12:39:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2025-12-11 12:39:47 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b879026
 2025-12-11 12:39:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-11 12:40:12 ERROR com.cht.TravelAndToursManagement.client.controller.AuthController - Table 'cht_updated.Employee' doesn't exist
+2025-12-11 12:40:12 ERROR com.cht.TravelAndToursManagement.controller.AuthController - Table 'cht_updated.Employee' doesn't exist
 2025-12-11 12:40:33 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
 2025-12-11 12:40:33 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2025-12-11 12:40:34 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b879026
 2025-12-11 12:40:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-11 12:45:12 ERROR com.cht.TravelAndToursManagement.client.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
+2025-12-11 12:45:12 ERROR com.cht.TravelAndToursManagement.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
 javafx.fxml.LoadException: 
 /home/jerico/code/school/java/CHT-Travel-and-Tours-Management-System/target/classes/com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml:17
 
@@ -610,8 +610,8 @@ javafx.fxml.LoadException:
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
@@ -666,7 +666,7 @@ javafx.fxml.LoadException:
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.client.controller.MainLayoutController.<init>()
+Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.controller.MainLayoutController.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3187)
 	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2491)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:941)
@@ -679,7 +679,7 @@ Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.cli
 2025-12-11 17:15:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2025-12-11 17:15:57 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66616cf6
 2025-12-11 17:15:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-11 17:19:03 ERROR com.cht.TravelAndToursManagement.client.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
+2025-12-11 17:19:03 ERROR com.cht.TravelAndToursManagement.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
 javafx.fxml.LoadException: 
 /home/jerico/code/school/java/CHT-Travel-and-Tours-Management-System/target/classes/com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml:17
 
@@ -692,8 +692,8 @@ javafx.fxml.LoadException:
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.setCenterContent(MainLayoutController.java:44)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.addBooking(MainLayoutController.java:63)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
@@ -748,7 +748,7 @@ javafx.fxml.LoadException:
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.client.controller.MainLayoutController.<init>()
+Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.controller.MainLayoutController.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3187)
 	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2491)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:941)
@@ -761,7 +761,7 @@ Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.cli
 2025-12-11 17:23:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2025-12-11 17:23:20 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7582e229
 2025-12-11 17:23:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-11 17:23:37 ERROR com.cht.TravelAndToursManagement.client.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
+2025-12-11 17:23:37 ERROR com.cht.TravelAndToursManagement.controller.MainLayoutController - Failed to load center content FXML: /com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml
 javafx.fxml.LoadException: 
 /home/jerico/code/school/java/CHT-Travel-and-Tours-Management-System/target/classes/com/cht/TravelAndToursManagement/view/AddBooking1-view.fxml:17
 
@@ -774,8 +774,8 @@ javafx.fxml.LoadException:
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.setCenterContent(MainLayoutController.java:46)
-	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.client.controller.MainLayoutController.addBooking(MainLayoutController.java:65)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.setCenterContent(MainLayoutController.java:46)
+	at com.cht.TravelAndToursManagement.client/com.cht.TravelAndToursManagement.controller.MainLayoutController.addBooking(MainLayoutController.java:65)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
@@ -830,7 +830,7 @@ javafx.fxml.LoadException:
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
 	at javafx.graphics@21/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.client.controller.MainLayoutController.<init>()
+Caused by: java.lang.NoSuchMethodException: com.cht.TravelAndToursManagement.controller.MainLayoutController.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3187)
 	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2491)
 	at javafx.fxml@21/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:941)

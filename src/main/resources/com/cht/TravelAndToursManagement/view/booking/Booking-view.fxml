@@ -14,10 +14,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<!-- Extracted center dashboard content from MainLayout so the sidebar can remain constant -->
-
 <BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.cht.TravelAndToursManagement.client.controller.BookingController">
+            fx:controller="com.cht.TravelAndToursManagement.controller.booking.BookingController">
     <top>
         <fx:include source="../reusableComponents/Header-view.fxml"/>
 
