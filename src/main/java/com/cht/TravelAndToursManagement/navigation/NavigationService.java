@@ -49,7 +49,7 @@ public class NavigationService {
             Parent root = loader.load();
 
             Scene scene = new Scene(root);
-            scene.setUserAgentStylesheet("/com/cht/TravelAndToursManagement/view/css/general.css");
+//            scene.setUserAgentStylesheet("/com/cht/TravelAndToursManagement/view/css/general.css");
 
             primaryStage.setTitle("Travel and Tours Management System");
             primaryStage.setMaximized(true);

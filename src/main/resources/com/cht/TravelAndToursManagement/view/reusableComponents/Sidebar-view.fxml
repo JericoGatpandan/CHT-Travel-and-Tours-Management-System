@@ -35,7 +35,7 @@
             <Button onAction="#goToBookingView" prefHeight="38.0" prefWidth="234.0" text="Dashboard" textFill="#108af5" VBox.vgrow="ALWAYS" />
             <Button prefHeight="38.0" prefWidth="253.0" text="Customer Records" VBox.vgrow="ALWAYS" />
             <Button prefHeight="38.0" prefWidth="251.0" text="Tour Packages" VBox.vgrow="ALWAYS" />
-            <Button onAction="#goToEmployee" prefHeight="38.0" prefWidth="248.0" text="Employees" VBox.vgrow="ALWAYS" />
+            <Button prefHeight="38.0" prefWidth="248.0" text="Employees" VBox.vgrow="ALWAYS" />
             <Button prefHeight="38.0" prefWidth="277.0" text="Hotels" VBox.vgrow="ALWAYS" />
             <Button prefHeight="38.0" prefWidth="259.0" text="Transportation" VBox.vgrow="ALWAYS" />
             <Button prefHeight="38.0" prefWidth="252.0" text="Payments" VBox.vgrow="ALWAYS" />

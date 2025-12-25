@@ -564,7 +564,7 @@ public final class FXMLPaths {
     private FXMLPaths() {
     } // Prevent instantiation
 
-    public static final String LOGIN = "/com/cht/TravelAndToursManagement/view/Login-view.fxml";
+    public static final String LOGIN = "/com/cht/TravelAndToursManagement/view/auth/Login-view.fxml";
     public static final String DASHBOARD = "/com/cht/TravelAndToursManagement/view/MainLayout-view.fxml";
     public static final String EMPLOYEE = "/com/cht/TravelAndToursManagement/view/Employee-view.fxml";
 }

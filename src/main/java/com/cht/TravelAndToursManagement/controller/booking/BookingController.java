@@ -52,7 +52,6 @@ public class BookingController extends MainLayoutController implements Initializ
             Scene scene = new Scene(modalRoot);
 
             modalStage.setScene(scene);
-            scene.setUserAgentStylesheet("/com/cht/TravelAndToursManagement/view/css/styles.css");
             modalStage.setMinWidth(1000);
             modalStage.setMinHeight(800);
             modalStage.centerOnScreen();

@@ -15,12 +15,12 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="cht_updated@localhost" uuid="132dc8f2-24b4-4416-9c3c-ed979ca1091e">
-      <database-info product="MySQL" version="8.0.44-0ubuntu0.24.04.1" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.44" exact-driver-version="8.2">
+    <data-source name="cht_updated@localhost" uuid="b8dd06eb-93e3-482a-84c8-c0f706e78c8e">
+      <database-info product="MySQL" version="8.0.44" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.44" exact-driver-version="8.2">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
       <schema-mapping>

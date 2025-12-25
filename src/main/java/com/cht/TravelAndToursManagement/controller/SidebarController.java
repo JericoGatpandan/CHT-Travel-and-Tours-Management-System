@@ -46,10 +46,10 @@ public class SidebarController {
         System.out.println("Dashboard clicked");
     }
 
-    @FXML
-    public void goToEmployee() {
-        navigationService.setCenterContent(FXMLPaths.EMPLOYEE);
-    }
+//    @FXML
+//    public void goToEmployee() {
+//        navigationService.setCenterContent(FXMLPaths.EMPLOYEE);
+//    }
 
     @FXML
     public void goToBookingView() {
