@@ -1,13 +1,19 @@
 package com.cht.TravelAndToursManagement.controller.booking;
 
 import com.cht.TravelAndToursManagement.model.Client;
+import com.cht.TravelAndToursManagement.navigation.ControllerFactory;
 import com.cht.TravelAndToursManagement.navigation.NavigationService;
+import com.cht.TravelAndToursManagement.navigation.FXMLPaths;
 import com.cht.TravelAndToursManagement.repository.ClientRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -15,9 +21,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -47,14 +57,23 @@ public class BookingStep1Controller implements Initializable {
     @FXML
     private VBox newCustomerCard;
 
+    @FXML private VBox newCustomerForm;
+    @FXML private TextField newNameField;
+    @FXML private TextField newEmailField;
+    @FXML private TextField newAddressField;
+    @FXML private TextField newContactField;
+
     private String selectedClientType = null;
     private Client selectedClient = null;
     private final NavigationService navigationService;
     private final ClientRepository clientRepository;
+    private Client newCustomerDraft = null;
+    private final ControllerFactory controllerFactory;
 
-    public BookingStep1Controller(NavigationService navigationService, ClientRepository clientRepository) {
+    public BookingStep1Controller(NavigationService navigationService, ClientRepository clientRepository, ControllerFactory controllerFactory) {
         this.navigationService = navigationService;
         this.clientRepository = clientRepository;
+        this.controllerFactory = controllerFactory;
     }
 
     @Override
@@ -193,6 +212,7 @@ public class BookingStep1Controller implements Initializable {
     private void selectNewCustomer(MouseEvent event) {
         selectedClientType = "new";
         selectedClient = null;
+        buildNewCustomerDraft();
         updateCardSelection();
     }
 
@@ -220,8 +240,15 @@ public class BookingStep1Controller implements Initializable {
                             "-fx-padding: 24; -fx-background-color: white; -fx-background-radius: 8; -fx-cursor: hand;"
             );
 
+            if (newCustomerForm != null) {
+                newCustomerForm.setVisible(false);
+                newCustomerForm.setManaged(false);
+            }
+            newCustomerDraft = null;
+
             getClientName();
         } else if ("new".equals(selectedClientType)) {
+            // hide search
             searchField.clear();
             searchField.setVisible(false);
             searchField.setManaged(false);
@@ -234,17 +261,51 @@ public class BookingStep1Controller implements Initializable {
                 clientListView.setVisible(false);
                 clientListView.setManaged(false);
             }
-
-            newCustomerCard.setStyle(
-                    "-fx-border-color: #009a61; -fx-border-radius: 8; -fx-border-width: 2; " +
-                            "-fx-padding: 24; -fx-background-color:  #e9f7ef; -fx-background-radius: 8; -fx-cursor: hand;"
-            );
+            // show new customer form
+            if (newCustomerForm != null) {
+                newCustomerForm.setVisible(true);
+                newCustomerForm.setManaged(true);
+            }
             existingClientCard.setStyle(
                     "-fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-border-width:  1; " +
                             "-fx-padding: 24; -fx-background-color: white; -fx-background-radius:  8; -fx-cursor:  hand;"
             );
+            newCustomerCard.setStyle(
+                    "-fx-border-color: #009a61; -fx-border-radius: 8; -fx-border-width: 2; " +
+                            "-fx-padding: 24; -fx-background-color:  #e9f7ef; -fx-background-radius: 8; -fx-cursor: hand;"
+            );
+            buildNewCustomerDraft();
         }
         updateNextButtonState();
+    }
+
+    private void buildNewCustomerDraft() {
+        if (!"new".equals(selectedClientType)) {
+            newCustomerDraft = null;
+            return;
+        }
+        String name = safeText(newNameField);
+        String email = safeText(newEmailField);
+        String address = safeText(newAddressField);
+        String contact = safeText(newContactField);
+        boolean complete = !name.isEmpty() && !email.isEmpty() && !address.isEmpty() && !contact.isEmpty();
+        if (complete) {
+            Client c = new Client();
+            c.setClientName(name);
+            c.setEmail(email);
+            c.setAddress(address);
+            c.setContactNumber(contact);
+            c.setCustomerType(null);
+            String now = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+            c.setDateRegistered(now);
+            newCustomerDraft = c;
+        } else {
+            newCustomerDraft = null;
+        }
+    }
+
+    private String safeText(TextField field) {
+        return field == null || field.getText() == null ? "" : field.getText().trim();
     }
 
     private void getClientName() {
@@ -284,7 +345,15 @@ public class BookingStep1Controller implements Initializable {
     }
 
     private void updateNextButtonState() {
-        boolean enable = selectedClientType != null && (!"existing".equals(selectedClientType) || selectedClient != null);
+        boolean enable;
+        if ("existing".equals(selectedClientType)) {
+            enable = selectedClient != null;
+        } else if ("new".equals(selectedClientType)) {
+            buildNewCustomerDraft();
+            enable = newCustomerDraft != null;
+        } else {
+            enable = false;
+        }
         nextButton.setDisable(!enable);
         nextButton.setStyle(enable
                 ? "-fx-padding: 10 16; -fx-font-family: 'Inter'; -fx-font-size: 14; -fx-font-weight:  500; -fx-text-fill: white; -fx-background-color: #009a61; -fx-border-radius: 6; -fx-cursor: hand;"
@@ -306,9 +375,42 @@ public class BookingStep1Controller implements Initializable {
     private void handleNextStep() {
         if (selectedClientType == null) return;
         if ("existing".equals(selectedClientType) && selectedClient == null) return;
-        System.out.println("Proceeding with: " + selectedClientType + " customer" + (selectedClient != null ? " -> " + selectedClient.getName() : ""));
-//         navigationService.navigateTo(Route. BOOKING_STEP2);
-        closeStage();
+        if ("new".equals(selectedClientType) && newCustomerDraft == null) return;
+        openStep2Modal();
+    }
+
+    private void openStep2Modal() {
+        Stage step1Stage = (Stage) nextButton.getScene().getWindow();
+        Stage ownerStage = (Stage) step1Stage.getOwner();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(FXMLPaths.BOOKING_STEP2));
+            loader.setControllerFactory(controllerFactory);
+            Parent root = loader.load();
+//                     Stage owner = (Stage) addBookingButton.getScene().getWindow();
+//
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource(FXMLPaths.BOOKING_STEP1));
+//            loader.setControllerFactory(controllerFactory);
+//            Parent modalRoot = loader.load();
+//
+//            Stage modalStage = new Stage();
+//            modalStage.setTitle("Add New Booking");
+//
+//            modalStage.initOwner(owner);
+
+            Stage modalStage = new Stage();
+            modalStage.setTitle("Select Package");
+            modalStage.initOwner(ownerStage);
+            modalStage.initModality(Modality.APPLICATION_MODAL);
+            modalStage.setScene(new Scene(root));
+            modalStage.setMinWidth(1000);
+            modalStage.setMinHeight(800);
+            modalStage.centerOnScreen();
+
+            step1Stage.close();
+            modalStage.showAndWait();
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to open Booking Step 2", e);
+        }
     }
 
     private void closeStage() {
@@ -322,5 +424,9 @@ public class BookingStep1Controller implements Initializable {
 
     public Client getSelectedClient() {
         return selectedClient;
+    }
+
+    public Client getNewCustomerDraft() {
+        return newCustomerDraft;
     }
 }

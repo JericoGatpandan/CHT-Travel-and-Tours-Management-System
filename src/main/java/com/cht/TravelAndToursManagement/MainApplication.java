@@ -4,6 +4,7 @@ import com.cht.TravelAndToursManagement.config.DatabaseConfig;
 import com.cht.TravelAndToursManagement.controller.*;
 import com.cht.TravelAndToursManagement.controller.booking.BookingController;
 import com.cht.TravelAndToursManagement.controller.booking.BookingStep1Controller;
+import com.cht.TravelAndToursManagement.controller.booking.BookingStep2Controller;
 import com.cht.TravelAndToursManagement.navigation.ControllerFactory;
 import com.cht.TravelAndToursManagement.navigation.NavigationService;
 import com.cht.TravelAndToursManagement.navigation.Route;
@@ -54,8 +55,8 @@ public class MainApplication extends Application {
             controllerFactory.registerController(EmployeeController.class, new EmployeeController(employeeRepository, navigationService));
             controllerFactory.registerController(BookingController.class, new BookingController(dashboardService, navigationService, controllerFactory));
             controllerFactory.registerController(SidebarController.class, new SidebarController(navigationService, controllerFactory));
-            controllerFactory.registerController(BookingStep1Controller.class, new BookingStep1Controller(navigationService, clientRepository));
-
+            controllerFactory.registerController(BookingStep1Controller.class, new BookingStep1Controller(navigationService, clientRepository, controllerFactory));
+            controllerFactory.registerController(BookingStep2Controller.class, new BookingStep2Controller(navigationService, clientRepository));
             // Start navigation
             navigationService.navigateTo(Route.LOGIN);
 
