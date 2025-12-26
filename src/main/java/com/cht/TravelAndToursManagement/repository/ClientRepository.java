@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface ClientRepository {
     int count();
-    
-    List<Client> findByName();
-    
+    // Find clients by matching name or email (partial match)
+    List<Client> findByName(String keyword);
+    List<Client> findByNameOrEmail(String keyword);
 }

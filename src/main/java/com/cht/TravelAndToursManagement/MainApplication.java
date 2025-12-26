@@ -38,11 +38,11 @@ public class MainApplication extends Application {
             // Create repositories
             EmployeeRepository employeeRepository = new EmployeeRepositoryImpl(dataSource);
             BookingRepository bookingRepository = new BookingRepositoryImpl(dataSource);
-            ClientRepository customerRepository = new ClientRepositoryImpl(dataSource);
+            ClientRepository clientRepository = new ClientRepositoryImpl(dataSource);
 
             // Create services
             AuthenticationService authService = new AuthenticationService(employeeRepository);
-            DashboardService dashboardService = new DashboardService(bookingRepository, customerRepository);
+            DashboardService dashboardService = new DashboardService(bookingRepository, clientRepository);
 
             // Create controller factory and navigation service
             ControllerFactory controllerFactory = new ControllerFactory();
@@ -54,7 +54,7 @@ public class MainApplication extends Application {
             controllerFactory.registerController(EmployeeController.class, new EmployeeController(employeeRepository, navigationService));
             controllerFactory.registerController(BookingController.class, new BookingController(dashboardService, navigationService, controllerFactory));
             controllerFactory.registerController(SidebarController.class, new SidebarController(navigationService, controllerFactory));
-            controllerFactory.registerController(BookingStep1Controller.class, new BookingStep1Controller(navigationService));
+            controllerFactory.registerController(BookingStep1Controller.class, new BookingStep1Controller(navigationService, clientRepository));
 
             // Start navigation
             navigationService.navigateTo(Route.LOGIN);

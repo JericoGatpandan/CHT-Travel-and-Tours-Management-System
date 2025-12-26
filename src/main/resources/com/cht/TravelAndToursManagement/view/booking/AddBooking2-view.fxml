@@ -131,7 +131,7 @@
                 <!-- Customer Selection Cards -->
                 <HBox spacing="24">
                     <!-- Existing Customer Card -->
-                    <VBox fx:id="existingCustomerCard"
+                    <VBox fx:id="existingClientCard"
                           style="-fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-border-width: 1; -fx-padding: 24; -fx-background-color:  white; -fx-background-radius: 8; -fx-cursor: hand;"
                           spacing="12" HBox.hgrow="ALWAYS">
                         <HBox spacing="16" alignment="CENTER_LEFT">

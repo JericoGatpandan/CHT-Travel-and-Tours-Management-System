@@ -22,5 +22,7 @@ module com.cht.TravelAndToursManagement {
     opens com.cht.TravelAndToursManagement.service to javafx.fxml;
     exports com.cht.TravelAndToursManagement.controller.booking;
     opens com.cht.TravelAndToursManagement.controller.booking to javafx.fxml;
+    exports com.cht.TravelAndToursManagement.repository;
+    opens  com.cht.TravelAndToursManagement.repository;
 
 }

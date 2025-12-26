@@ -19,6 +19,10 @@ public class Client {
         this.dateRegistered = dateRegistered;
     }
 
+    public Client() {
+
+    }
+
     public int getClientId() {
         return clientId;
     }
@@ -51,7 +55,7 @@ public class Client {
         this.clientId = clientId;
     }
 
-    public void setName(String name) {
+    public void setClientName(String name) {
         this.name = name;
     }
 
@@ -74,5 +78,6 @@ public class Client {
     public void setDateRegistered(String dateRegistered) {
         this.dateRegistered = dateRegistered;
     }
+
 
 }

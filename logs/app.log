@@ -1,382 +1,102 @@
-2025-12-25 12:25:05 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 12:25:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 12:25:06 ERROR com.cht.TravelAndToursManagement.config.DatabaseConfig - Failed to initialize HikariCP
-com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:584)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.config.DatabaseConfig.<clinit>(DatabaseConfig.java:29)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.MainApplication.start(MainApplication.java:36)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:138)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
-	... 13 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
-	at mysql.connector.j@9.5.0/com.mysql.cj.NativeSession.connect(NativeSession.java:142)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
-	... 21 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
-	at java.base/java.net.Socket.connect(Socket.java:659)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
-	... 24 common frames omitted
-2025-12-25 12:29:29 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 12:29:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 12:29:31 ERROR com.cht.TravelAndToursManagement.config.DatabaseConfig - Failed to initialize HikariCP
-com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:584)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.config.DatabaseConfig.<clinit>(DatabaseConfig.java:29)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.MainApplication.start(MainApplication.java:36)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:138)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
-	... 13 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
-	at mysql.connector.j@9.5.0/com.mysql.cj.NativeSession.connect(NativeSession.java:142)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
-	... 21 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
-	at java.base/java.net.Socket.connect(Socket.java:659)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
-	... 24 common frames omitted
-2025-12-25 12:29:45 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 12:29:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 12:29:46 ERROR com.cht.TravelAndToursManagement.config.DatabaseConfig - Failed to initialize HikariCP
-com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:584)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.config.DatabaseConfig.<clinit>(DatabaseConfig.java:29)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.MainApplication.start(MainApplication.java:36)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:138)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
-	... 13 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
-	at mysql.connector.j@9.5.0/com.mysql.cj.NativeSession.connect(NativeSession.java:142)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
-	... 21 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
-	at java.base/java.net.Socket.connect(Socket.java:659)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
-	... 24 common frames omitted
-2025-12-25 12:30:08 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 12:30:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 12:30:10 ERROR com.cht.TravelAndToursManagement.config.DatabaseConfig - Failed to initialize HikariCP
-com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Unknown database 'cht_updated'
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:584)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.config.DatabaseConfig.<clinit>(DatabaseConfig.java:29)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.MainApplication.start(MainApplication.java:36)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:138)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'cht_updated'
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
-	... 13 common frames omitted
-2025-12-25 12:43:46 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 12:43:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 12:43:46 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4aa1ed6c
-2025-12-25 12:43:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 12:43:57 ERROR com.cht.TravelAndToursManagement.controller.AuthController - Login failed
-com.cht.TravelAndToursManagement.exception.DataAccessException: Error validating employee credentials
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:81)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.service.AuthenticationService.authenticate(AuthenticationService.java:15)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:80)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.controller.AuthController$1.call(AuthController.java:77)
-	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: java.sql.SQLSyntaxErrorException: Table 'cht_updated.employee' doesn't exist
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1056)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.repository.impl.EmployeeRepositoryImpl.validateCredentials(EmployeeRepositoryImpl.java:75)
-	... 6 common frames omitted
-2025-12-25 12:50:51 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 12:50:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 12:50:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 12:50:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 13:46:01 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 13:46:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 13:46:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f9e44da
-2025-12-25 13:46:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 13:49:50 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 13:49:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 13:49:50 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 13:49:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 13:50:59 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 13:50:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 13:50:59 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cfca64
-2025-12-25 13:50:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:00:19 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:00:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:00:19 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:00:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:05:07 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:05:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:05:07 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50616e73
-2025-12-25 14:05:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:06:04 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:06:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:06:04 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:06:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:07:32 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:07:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:07:32 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:07:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:10:23 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:10:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:10:23 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:10:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:11:59 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:11:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:11:59 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:11:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:12:30 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:12:30 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:12:30 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bfe98ba
-2025-12-25 14:12:30 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:14:09 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:14:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:14:09 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:14:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:14:34 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:14:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:14:34 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:14:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:15:13 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:15:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:15:13 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:15:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:15:29 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:15:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:15:29 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:15:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:15:50 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:15:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:15:50 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:15:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:16:56 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:16:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:16:56 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:16:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:18:22 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:18:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:18:22 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be240f0
-2025-12-25 14:18:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:38:01 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:38:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:38:02 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2dfb3ae7
-2025-12-25 14:38:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:45:37 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:45:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:45:38 ERROR com.cht.TravelAndToursManagement.config.DatabaseConfig - Failed to initialize HikariCP
-com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:584)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.config.DatabaseConfig.<clinit>(DatabaseConfig.java:29)
-	at com.cht.TravelAndToursManagement/com.cht.TravelAndToursManagement.MainApplication.start(MainApplication.java:36)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:138)
-	at javafx.graphics@21.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
-	at com.zaxxer.hikari@5.1.0/com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
-	... 13 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
-	at mysql.connector.j@9.5.0/com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
-	at mysql.connector.j@9.5.0/com.mysql.cj.NativeSession.connect(NativeSession.java:142)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
-	at mysql.connector.j@9.5.0/com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
-	... 21 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
-	at java.base/java.net.Socket.connect(Socket.java:659)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
-	at mysql.connector.j@9.5.0/com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
-	... 24 common frames omitted
-2025-12-25 14:47:40 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:47:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:47:40 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15193781
-2025-12-25 14:47:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-25 14:49:00 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
-2025-12-25 14:49:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-25 14:49:00 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
-2025-12-25 14:49:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 09:21:32 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 09:21:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 09:21:35 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cbfdb92
+2025-12-26 09:21:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 09:25:42 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 09:25:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 09:25:44 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 09:25:44 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 09:26:30 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 09:26:30 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 09:26:33 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 09:26:33 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 09:29:40 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 09:29:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 09:29:41 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 09:29:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 09:30:57 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 09:30:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 09:30:58 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 09:30:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 09:34:15 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 09:34:15 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 09:34:16 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d8ac81c
+2025-12-26 09:34:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 09:35:02 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 09:35:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 09:35:03 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 09:35:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 09:35:36 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 09:35:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 09:35:37 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 09:35:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 09:36:21 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 09:36:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 09:36:22 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 09:36:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 09:48:08 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 09:48:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 09:48:09 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 09:48:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 10:47:24 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 10:47:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 10:47:35 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 10:47:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 10:47:36 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33c3703c
+2025-12-26 10:47:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:19:54 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:19:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:19:55 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:19:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:23:00 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:23:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:23:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:23:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:25:10 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:25:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:25:11 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fc2bd78
+2025-12-26 11:25:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:26:12 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:26:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:26:13 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:26:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:26:55 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:26:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:26:56 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:26:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:28:44 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:28:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:28:45 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:28:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:33:08 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:33:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:33:09 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:33:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:36:57 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:36:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:36:58 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:36:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:38:20 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:38:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:38:21 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:38:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:40:47 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:40:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:40:47 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:40:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:48:41 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:48:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:48:41 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fc2bd78
+2025-12-26 11:48:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:51:17 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:51:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:51:17 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:51:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:54:01 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:54:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:54:02 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:54:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-26 11:57:06 WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2025-12-26 11:57:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-26 11:57:06 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27f069fa
+2025-12-26 11:57:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.

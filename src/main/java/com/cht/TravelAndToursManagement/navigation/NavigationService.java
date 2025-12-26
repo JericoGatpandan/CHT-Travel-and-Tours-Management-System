@@ -5,6 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.EnumMap;
@@ -54,10 +55,12 @@ public class NavigationService {
             primaryStage.setTitle("Travel and Tours Management System");
             primaryStage.setMaximized(true);
 
-
-
-
             primaryStage.setScene(scene);
+
+
+            if (!primaryStage.isShowing()) {
+                primaryStage.show();
+            }
 
         } catch (IOException e) {
             throw new NavigationException("Failed to navigate to " + route + " using FXML: " + fxmlPath, e);

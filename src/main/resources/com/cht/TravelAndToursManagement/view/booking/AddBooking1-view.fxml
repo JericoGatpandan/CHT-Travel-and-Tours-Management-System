@@ -2,34 +2,27 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.cht.TravelAndToursManagement.controller.booking.BookingStep1Controller"
-            prefHeight="700" prefWidth="1100"
-            style="-fx-background-color: rgba(0, 0, 0, 0.5);">
+<AnchorPane prefHeight="903.0" prefWidth="1100" style="-fx-background-color: rgba(0, 0, 0, 0.5);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cht.TravelAndToursManagement.controller.booking.BookingStep1Controller">
 
     <!-- Modal Container -->
-    <StackPane AnchorPane.topAnchor="50" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="50"
-               AnchorPane.rightAnchor="50">
-        <VBox style="-fx-background-color: white; -fx-border-radius: 12; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 24, 0, 0, 12);"
-              spacing="0">
+    <StackPane AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50">
+        <VBox spacing="0" style="-fx-background-color: white; -fx-border-radius: 12; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 24, 0, 0, 12);">
 
             <!-- Header Section -->
             <HBox prefHeight="80" spacing="16" style="-fx-padding: 32 32 0 32;">
-                <VBox HBox.hgrow="ALWAYS" spacing="8">
-                    <Label text="New Booking"
-                           style="-fx-font-family: 'Inter'; -fx-font-size: 28; -fx-font-weight:  bold; -fx-text-fill: #2C3E50;"/>
-                    <Label text="Create a new travel booking for your customer"
-                           style="-fx-font-family: 'Inter'; -fx-font-size:  14; -fx-text-fill: #7F8C8D;"/>
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label style="-fx-font-family: 'Inter'; -fx-font-size: 28; -fx-font-weight:  bold; -fx-text-fill: #2C3E50;" text="New Booking" />
+                    <Label style="-fx-font-family: 'Inter'; -fx-font-size:  14; -fx-text-fill: #7F8C8D;" text="Create a new travel booking for your customer" />
                 </VBox>
-                <Button fx:id="closeButton"
-                        style="-fx-padding: 8; -fx-background-color: transparent; -fx-font-size: 18; -fx-text-fill: #2C3E50; -fx-cursor: hand;"
-                        text="✕" onAction="#handleClose"/>
+                <Button fx:id="closeButton" onAction="#handleClose" style="-fx-padding: 8; -fx-background-color: transparent; -fx-font-size: 18; -fx-text-fill: #2C3E50; -fx-cursor: hand;" text="✕" />
             </HBox>
 
             <!-- Progress Indicator Section -->
@@ -39,80 +32,66 @@
                     <!-- Step 1: Customer -->
                     <VBox alignment="CENTER" spacing="8" HBox.hgrow="ALWAYS">
                         <StackPane prefHeight="44" prefWidth="44">
-                            <Circle radius="22" fill="#007bff" stroke="#007bff" strokeWidth="2"/>
-                            <Label text="1"
-                                   style="-fx-font-family: 'Inter'; -fx-font-size:  16; -fx-font-weight:  bold; -fx-text-fill: white;"/>
+                            <Circle fill="#007bff" radius="22" stroke="#007bff" strokeWidth="2" />
+                            <Label style="-fx-font-family: 'Inter'; -fx-font-size:  16; -fx-font-weight:  bold; -fx-text-fill: white;" text="1" />
                         </StackPane>
-                        <Label text="Customer"
-                               style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill:  #2C3E50;"/>
+                        <Label style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill:  #2C3E50;" text="Customer" />
                     </VBox>
 
                     <!-- Progress Line 1 -->
-                    <VBox prefWidth="80" alignment="CENTER" HBox.hgrow="ALWAYS">
-                        <Label text="━━━━━━━━━━"
-                               style="-fx-font-family: 'Inter'; -fx-text-fill: #E0E0E0; -fx-font-size: 10;"/>
+                    <VBox alignment="CENTER" prefWidth="80" HBox.hgrow="ALWAYS">
+                        <Label style="-fx-font-family: 'Inter'; -fx-text-fill: #E0E0E0; -fx-font-size: 10;" text="━━━━━━━━━━" />
                     </VBox>
 
                     <!-- Step 2: Package -->
                     <VBox alignment="CENTER" spacing="8" HBox.hgrow="ALWAYS">
                         <StackPane prefHeight="44" prefWidth="44">
-                            <Circle radius="22" fill="#E0E0E0" stroke="#E0E0E0" strokeWidth="2"/>
-                            <Label text="2"
-                                   style="-fx-font-family: 'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                            <Circle fill="#E0E0E0" radius="22" stroke="#E0E0E0" strokeWidth="2" />
+                            <Label style="-fx-font-family: 'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;" text="2" />
                         </StackPane>
-                        <Label text="Package"
-                               style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;"/>
+                        <Label style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;" text="Package" />
                     </VBox>
 
                     <!-- Progress Line 2 -->
-                    <VBox prefWidth="80" alignment="CENTER" HBox.hgrow="ALWAYS">
-                        <Label text="━━━━━━━━━━"
-                               style="-fx-font-family: 'Inter'; -fx-text-fill: #E0E0E0; -fx-font-size: 10;"/>
+                    <VBox alignment="CENTER" prefWidth="80" HBox.hgrow="ALWAYS">
+                        <Label style="-fx-font-family: 'Inter'; -fx-text-fill: #E0E0E0; -fx-font-size: 10;" text="━━━━━━━━━━" />
                     </VBox>
 
                     <!-- Step 3: Travel Details -->
                     <VBox alignment="CENTER" spacing="8" HBox.hgrow="ALWAYS">
                         <StackPane prefHeight="44" prefWidth="44">
-                            <Circle radius="22" fill="#E0E0E0" stroke="#E0E0E0" strokeWidth="2"/>
-                            <Label text="3"
-                                   style="-fx-font-family:  'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                            <Circle fill="#E0E0E0" radius="22" stroke="#E0E0E0" strokeWidth="2" />
+                            <Label style="-fx-font-family:  'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;" text="3" />
                         </StackPane>
-                        <Label text="Travel Details"
-                               style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;"/>
+                        <Label style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;" text="Travel Details" />
                     </VBox>
 
                     <!-- Progress Line 3 -->
-                    <VBox prefWidth="80" alignment="CENTER" HBox.hgrow="ALWAYS">
-                        <Label text="━━━━━━━━━━"
-                               style="-fx-font-family: 'Inter'; -fx-text-fill: #E0E0E0; -fx-font-size: 10;"/>
+                    <VBox alignment="CENTER" prefWidth="80" HBox.hgrow="ALWAYS">
+                        <Label style="-fx-font-family: 'Inter'; -fx-text-fill: #E0E0E0; -fx-font-size: 10;" text="━━━━━━━━━━" />
                     </VBox>
 
                     <!-- Step 4: Payment -->
                     <VBox alignment="CENTER" spacing="8" HBox.hgrow="ALWAYS">
                         <StackPane prefHeight="44" prefWidth="44">
-                            <Circle radius="22" fill="#E0E0E0" stroke="#E0E0E0" strokeWidth="2"/>
-                            <Label text="4"
-                                   style="-fx-font-family:  'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                            <Circle fill="#E0E0E0" radius="22" stroke="#E0E0E0" strokeWidth="2" />
+                            <Label style="-fx-font-family:  'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;" text="4" />
                         </StackPane>
-                        <Label text="Payment"
-                               style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;"/>
+                        <Label style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;" text="Payment" />
                     </VBox>
 
                     <!-- Progress Line 4 -->
-                    <VBox prefWidth="80" alignment="CENTER" HBox.hgrow="ALWAYS">
-                        <Label text="━━━━━━━━━━"
-                               style="-fx-font-family: 'Inter'; -fx-text-fill: #E0E0E0; -fx-font-size: 10;"/>
+                    <VBox alignment="CENTER" prefWidth="80" HBox.hgrow="ALWAYS">
+                        <Label style="-fx-font-family: 'Inter'; -fx-text-fill: #E0E0E0; -fx-font-size: 10;" text="━━━━━━━━━━" />
                     </VBox>
 
                     <!-- Step 5:  Confirm -->
                     <VBox alignment="CENTER" spacing="8" HBox.hgrow="ALWAYS">
                         <StackPane prefHeight="44" prefWidth="44">
-                            <Circle radius="22" fill="#E0E0E0" stroke="#E0E0E0" strokeWidth="2"/>
-                            <Label text="5"
-                                   style="-fx-font-family:  'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                            <Circle fill="#E0E0E0" radius="22" stroke="#E0E0E0" strokeWidth="2" />
+                            <Label style="-fx-font-family:  'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;" text="5" />
                         </StackPane>
-                        <Label text="Confirm"
-                               style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;"/>
+                        <Label style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;" text="Confirm" />
                     </VBox>
                 </HBox>
             </VBox>
@@ -122,56 +101,47 @@
 
                 <!-- Title -->
                 <VBox spacing="8">
-                    <Label text="Customer Information"
-                           style="-fx-font-family: 'Inter'; -fx-font-size:  24; -fx-font-weight:  bold; -fx-text-fill: #2C3E50;"/>
-                    <Label text="Select an existing customer or add a new one to continue"
-                           style="-fx-font-family: 'Inter'; -fx-font-size:  14; -fx-text-fill:  #7F8C8D;"/>
+                    <Label style="-fx-font-family: 'Inter'; -fx-font-size:  24; -fx-font-weight:  bold; -fx-text-fill: #2C3E50;" text="Customer Information" />
+                    <Label style="-fx-font-family: 'Inter'; -fx-font-size:  14; -fx-text-fill:  #7F8C8D;" text="Select an existing customer or add a new one to continue" />
                 </VBox>
 
                 <!-- Customer Selection Cards -->
                 <HBox spacing="24">
                     <!-- Existing Customer Card -->
-                    <VBox fx:id="existingCustomerCard"
-                          style="-fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-border-width: 1; -fx-padding: 24; -fx-background-color:  white; -fx-background-radius: 8; -fx-cursor: hand;"
-                          spacing="12" HBox.hgrow="ALWAYS">
-                        <HBox spacing="16" alignment="CENTER_LEFT">
-                            <Label text="👤" style="-fx-font-size: 32;"/>
+                    <VBox fx:id="existingClientCard" spacing="12" style="-fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-border-width: 1; -fx-padding: 24; -fx-background-color:  white; -fx-background-radius: 8; -fx-cursor: hand;" HBox.hgrow="ALWAYS">
+                        <HBox alignment="CENTER_LEFT" spacing="16">
+                            <Label style="-fx-font-size: 32;" text="👤" />
                             <VBox spacing="4">
-                                <Label text="Existing Customer"
-                                       style="-fx-font-family: 'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
-                                <Label text="Search from records"
-                                       style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;"/>
+                                <Label style="-fx-font-family: 'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #2C3E50;" text="Existing Customer" />
+                                <Label style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;" text="Search from records" />
                             </VBox>
                         </HBox>
                     </VBox>
 
                     <!-- Add New Customer Card -->
-                    <VBox fx:id="newCustomerCard"
-                          style="-fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-border-width:  1; -fx-padding:  24; -fx-background-color: white; -fx-background-radius: 8; -fx-cursor: hand;"
-                          spacing="12" HBox.hgrow="ALWAYS">
-                        <HBox spacing="16" alignment="CENTER_LEFT">
-                            <Label text="➕" style="-fx-font-size: 32;"/>
+                    <VBox fx:id="newCustomerCard" spacing="12" style="-fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-border-width:  1; -fx-padding:  24; -fx-background-color: white; -fx-background-radius: 8; -fx-cursor: hand;" HBox.hgrow="ALWAYS">
+                        <HBox alignment="CENTER_LEFT" spacing="16">
+                            <Label style="-fx-font-size: 32;" text="➕" />
                             <VBox spacing="4">
-                                <Label text="Add New Customer"
-                                       style="-fx-font-family: 'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
-                                <Label text="Create new profile"
-                                       style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;"/>
+                                <Label style="-fx-font-family: 'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #2C3E50;" text="Add New Customer" />
+                                <Label style="-fx-font-family: 'Inter'; -fx-font-size: 12; -fx-text-fill: #7F8C8D;" text="Create new profile" />
                             </VBox>
                         </HBox>
                     </VBox>
                 </HBox>
 
-                
+                <!-- Search Existing Customer -->
+                <VBox fx:id="searchContainer" spacing="12" visible="false" managed="false" VBox.vgrow="ALWAYS" style="-fx-padding: 16; -fx-background-color: #f8fafc; -fx-background-radius: 10;">
+                    <Label style="-fx-font-family: 'Inter'; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #2C3E50;" text="Search Customer" />
+                    <TextField fx:id="searchField" promptText="Search by name or email" visible="false" managed="false" />
+                    <ListView fx:id="clientListView" VBox.vgrow="ALWAYS" visible="false" managed="false" />
+                </VBox>
             </VBox>
 
             <!-- Footer Section - Buttons -->
-            <HBox prefHeight="70" spacing="12" style="-fx-padding: 0 32 32 32;" alignment="CENTER_RIGHT">
-                <Button fx:id="cancelButton" text="Cancel"
-                        style="-fx-padding: 10 16; -fx-font-family:  'Inter'; -fx-font-size: 14; -fx-font-weight: 500; -fx-text-fill: #0066CC; -fx-background-color: white; -fx-border-color: #0066CC; -fx-border-width:  2; -fx-border-radius: 6; -fx-cursor: hand;"
-                        HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#handleCancel"/>
-                <Button fx:id="nextButton" text="Next Step"
-                        style="-fx-padding:  10 16; -fx-font-family: 'Inter'; -fx-font-size: 14; -fx-font-weight: 500; -fx-text-fill: white; -fx-background-color: #0066CC; -fx-border-radius: 6; -fx-cursor: hand;"
-                        disable="true" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#handleNextStep"/>
+            <HBox alignment="CENTER_RIGHT" prefWidth="1000.0" spacing="12" style="-fx-padding: 0 32 32 32;">
+                <Button fx:id="cancelButton" maxWidth="Infinity" onAction="#handleCancel" style="-fx-padding: 10 16; -fx-font-family:  'Inter'; -fx-font-size: 14; -fx-font-weight: 500; -fx-text-fill: #0066CC; -fx-background-color: white; -fx-border-color: #0066CC; -fx-border-width:  2; -fx-border-radius: 6; -fx-cursor: hand;" text="Cancel" HBox.hgrow="ALWAYS" />
+                <Button fx:id="nextButton" disable="true" maxWidth="Infinity" onAction="#handleNextStep" style="-fx-padding:  10 16; -fx-font-family: 'Inter'; -fx-font-size: 14; -fx-font-weight: 500; -fx-text-fill: white; -fx-background-color: #0066CC; -fx-border-radius: 6; -fx-cursor: hand;" text="Next Step" HBox.hgrow="ALWAYS" />
             </HBox>
 
         </VBox>
